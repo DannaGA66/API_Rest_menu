@@ -3,16 +3,16 @@ package com.proyecto.API_Rest.models;
 import jakarta.persistence.*;
 
 @Entity 
-@Table (name="ususario")
-public class UsusarioModel {
+@Table (name="user")
+public class UserModel {
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private Long id;
     
-    private String nombre;
+    private String name;
     private String email;
-    private Integer prioridad;
+    private Integer priority;
 
 
     public Long getId() {
@@ -21,11 +21,11 @@ public class UsusarioModel {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
     public String getEmail() {
         return email;
@@ -33,10 +33,10 @@ public class UsusarioModel {
     public void setEmail(String email) {
         this.email = email;
     }
-    public Integer getPrioridad() {
-        return prioridad;
+    public Integer getpriority() {
+        return priority;
     }
-    public void setPrioridad(Integer prioridad) {
-        this.prioridad = prioridad;
+    public void setpriority(Integer priority) {
+        this.priority = priority;
     }
 }
